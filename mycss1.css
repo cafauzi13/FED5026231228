@@ -1,0 +1,96 @@
+/* Mengatur gaya dasar untuk body */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
+    text-align: justify;
+    background-color: #FFF2F2;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+/* Mengatur gaya untuk link */
+a:link {
+    text-decoration: none;
+    color: #000957;
+}
+
+a:visited {
+    text-decoration: none;
+    color: grey;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #344CB7;
+    font-weight: bold;
+}
+
+/* Mengatur ukuran teks header */
+.formatheader {
+    font-size: larger;
+}
+
+/* CSS Gradient */
+/* Linear Gradient: Gradasi dari kiri ke kanan */
+.gradient-linear {
+    background: linear-gradient(180deg, #e0f7fa, #80deea);
+    padding: 20px;
+}
+
+/* Radial Gradient: Gradasi dari tengah ke luar berbentuk lingkaran */
+.gradient-radial {
+    background: radial-gradient(circle, #FFF2F2, #577BC1);
+    padding: 20px;
+}
+
+/* Conic Gradient: Gradasi berbentuk seperti roda warna */
+.gradient-conic {
+    background: conic-gradient(red, yellow, green, blue, red);
+    padding: 20px;
+}
+
+/* Transparent Gradient: Efek transisi dari warna solid ke transparan */
+.gradient-transparent {
+    background: linear-gradient(to bottom, #7886C7, white)
+}
+
+/* Efek gradient untuk teks */
+h1 {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* CSS Multiple Columns */
+/* Membagi teks menjadi 2 kolom dengan jarak 40px */
+.content {
+    column-count: 2;
+    column-gap: 40px;
+    text-align: justify;
+}
+
+/* Membagi teks menjadi 3 kolom dengan garis pemisah */
+.article {
+    column-count: 3;
+    column-gap: 30px;
+    column-rule: 1px dashed gray;
+}
+
+/* Membagi teks menjadi 4 kolom dengan warna garis pemisah */
+.news-section {
+    column-count: 4;
+    column-gap: 20px;
+    column-rule: 2px solid lightblue;
+}
+
+/* Menentukan lebar kolom agar fleksibel */
+.flex-columns {
+    column-count: 3;
+    column-width: 50px;
+    column-gap: 25px;
+}
+
+/* Membuat judul agar mengambil seluruh lebar kolom */
+h2 {
+    column-span: all;
+}
