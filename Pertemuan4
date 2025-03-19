@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengajuan Kontrak</title>
+    
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            width: 240px;
+            height: 100vh;
+            background-color: #0d3b66;
+            color: white;
+            padding: 20px;
+            position: fixed;
+        }
+        .sidebar img {
+            width: 70px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+        .sidebar h5, .sidebar p {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .sidebar .nav-link {
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .sidebar .nav-link:hover, .sidebar .nav-link.active {
+            background-color: #022547;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 100px;
+            border-radius: 50%;
+            display: block;
+            margin: 15px auto;
+        }
+        .rating-box {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <img src="https://via.placeholder.com/80" alt="User">
+        <h5><i class="fa-solid fa-user"></i> User</h5>
+        <p><i class="fa-solid fa-envelope"></i> user@mail.com</p>
+        <nav class="nav flex-column">
+            <a class="nav-link" href="#"><i class="fa-solid fa-book"></i> Helperlog</a>
+            <a class="nav-link active" href="#"><i class="fa-solid fa-magnifying-glass"></i> Helperfind</a>
+            <a class="nav-link" href="#"><i class="fa-solid fa-handshake"></i> Helperassist</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h4>Pengajuan Kontrak</h4>
+
+        <div class="row mt-4">
+            <div class="col-md-5">
+                <div class="p-3 text-center">
+                    <img src="">
+                    <h5>Nagisa Natsumi</h5>
+                    <p class="text-muted">Perawat Lansia</p>
+                    <div class="rating-box">
+                        <div><h6>4</h6><small>Tahun Pengalaman</small></div>
+                        <div><h6>⭐ 4.6</h6><small>Rating</small></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <div class="card p-3">
+                    <h5>Form Pengajuan Kontrak</h5>
+                    <form>
+                        <label>Nama Pengaju</label>
+                        <input type="text" class="form-control" placeholder="Masukkan nama pengaju">
+
+                        <label class="mt-2">Alamat Pengaju</label>
+                        <input type="text" class="form-control" placeholder="Masukkan alamat lengkap anda">
+
+                        <label class="mt-2">Penempatan Kerja</label>
+                        <input type="text" class="form-control" value="Surabaya" readonly>
+
+                        <div class="form-check mt-2">
+                            <input type="checkbox" class="form-check-input" id="checkDomicile">
+                            <label class="form-check-label" for="checkDomicile">Ajukan Penempatan di Luar Domisili</label>
+                        </div>
+
+                        <label class="mt-2">Rencana Masa Kontrak</label>
+                        <select class="form-control">
+                            <option>1 bulan</option>
+                            <option>3 bulan</option>
+                            <option>6 bulan</option>
+                            <option>1 tahun</option>
+                        </select>
+
+                        <button class="btn btn-primary btn-block mt-3" style="background-color:#0d3b66;">Ajukan Kontrak</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
