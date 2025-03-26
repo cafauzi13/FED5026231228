@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengajuan Kontrak</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+       
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 240px;
+            height: 100vh;
+            background-color: #0d3b66;
+            color: white;
+            padding: 20px;
+            position: fixed;
+        }
+        .sidebar img {
+            width: 50px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+        .profile-container {
+            display: flex;
+            align-items: center;
+            background-color: #0d3b66;
+            color: white;
+            width: 100%;
+            height: 15vh;
+            padding: 10px;
+        }
+        .profile-text p {
+            margin: 0;
+            margin-left: 15px;
+            font-size: 14px;
+        }
+        .profile-text p:first-child {
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .sidebar .nav-link {
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .sidebar .nav-link:hover, 
+        .sidebar .nav-link.active {
+            background-color: #022547;
+        }
+
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+        h4, h5 {
+            font-weight: 600;
+            color: #071727;
+        }
+        h4 {
+            font-size: 26px;
+        }
+        h5 {
+            font-size: 18px;
+        }
+        p, label {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .rating-box {
+            display: flex;
+            justify-content: space-around;
+            width: 150px;
+        }
+        .rating-box div {
+            flex: 1;
+            text-align: center;
+        }
+        .rating-box h6 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #071727;
+        }
+        .rating-box small {
+            font-size: 13px;
+            color: #888;
+        }
+
+        .form-control {
+            font-size: 13px;
+            padding: 8px;
+        }
+        .form-check-label {
+            font-size: 13px;
+        }
+        button {
+            font-size: 12px;
+            font-weight: 600;
+            background-color: #0d3b66;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="profile-container">
+            <img src="D:\FED5026231228\profil.png">
+            <div class="profile-text">
+                <p style="color: white;"><b>User</b></p>
+                <p style="color: white;">user@mail.com</p>
+            </div>
+        </div>
+        <nav class="nav flex-column">
+            <a class="nav-link" href="#"><i class="fa-solid fa-book"></i> Helperlog</a>
+            <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i> Helperfind</a>
+            <a class="nav-link" href="#"><i class="fa-solid fa-handshake"></i> Helperassist</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h4><i class="fa fa-arrow-left" aria-hidden="true"> </i></i> Pengajuan Kontrak</h4>
+        <div class="row mt-4">
+            <div class="col-md-5">
+                <div class="p-3">
+                    <img src="D:\FED5026231228\nagisa natsumi.png" 
+                    style="height: 250px; border-radius: 5%; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 10px;">
+                    <h5>Nagisa Natsumi</h5>
+                    <p class="text-muted">Perawat Lansia</p>
+
+                    <div class="rating-box d-flex justify-content-between p-3 mt-3" 
+                    style="border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9; width: 100%; gap: 10px;">
+                        <div>
+                            <h6>4</h6>
+                            <small>Tahun Pengalaman</small>
+                        </div>
+                        <div style="border-left: 1px solid #ddd;">
+                            <h6><i class="fa fa-star" aria-hidden="true"></i> 4.6</h6>
+                            <small>Rating</small>
+                        </div>
+                    </div>               
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h5>Form Pengajuan Kontrak</h5>
+                    <form>
+                        <label>Nama Pengaju</label>
+                        <input type="text" class="form-control" placeholder="Masukkan nama pengaju">
+
+                        <label class="mt-2">Alamat Pengaju</label>
+                        <textarea class="form-control" rows="4" placeholder="Masukkan alamat lengkap anda"></textarea>
+
+                        <label class="mt-2">Penempatan Kerja</label>
+                        <select class="form-control">
+                            <option value="Surabaya" selected>Surabaya</option>
+                            <option value="Jakarta">Jakarta</option>
+                            <option value="Bandung">Bandung</option>
+                            <option value="Yogyakarta">Yogyakarta</option>
+                            <option value="Malang">Malang</option>
+                        </select>
+                        <div class="form-check mt-2">
+                            <input type="checkbox" class="form-check-input" id="checkDomicile">
+                            <label class="form-check-label" for="checkDomicile">Ajukan Penempatan di Luar Domisili</label>
+                        </div>
+
+                        <label class="mt-2">Rencana Masa Kontrak</label>
+                        <select class="form-control">
+                            <option>1 bulan</option>
+                            <option>3 bulan</option>
+                            <option>6 bulan</option>
+                            <option>1 tahun</option>
+                        </select>
+
+                        <button class="btn btn-primary btn-block mt-3" style="background-color: #0d3b66;">Ajukan Kontrak</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
